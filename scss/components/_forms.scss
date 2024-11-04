@@ -1,0 +1,225 @@
+// Btn
+.btn {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.6;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50.5%;
+        height: 0;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50.5%;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    i {
+        font-weight: normal;
+        margin-right: 10px;
+    }
+
+    &:hover {
+        &:before,
+        &:after {
+            height: 100%;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &.btn-one {
+        color: $white-clr;
+        background-color: $primary-clr;
+
+        &:before,
+        &:after {
+            background-color: darken($primary-clr, 5%);
+        }
+
+        &:hover {
+            color: $white-clr;
+        }
+    }
+
+    &.btn-two {
+        color: $white-clr;
+        background-color: $heading-clr;
+
+        &:before,
+        &:after {
+            background-color: darken($heading-clr, 5%);
+        }
+
+        &:hover {
+            color: $white-clr;
+        }
+    }
+}
+
+.link-btn {
+    display: inline-block;
+    font-weight: 400;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 0;
+        height: 1px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &:hover {
+        &:after {
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+        }
+    }
+
+    &.link-one {
+        color: $primary-clr;
+
+        &:after {
+            background-color: $primary-clr;
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            bottom: 4px;
+        }
+
+        &:hover {
+            color: darken($primary-clr, 10%);
+
+            &:after {
+                width: 50%;
+                background-color: darken($primary-clr, 10%);
+            }
+        }
+    }
+
+    &.link-two {
+        color: $heading-clr;
+
+        &:after {
+            background-color: $heading-clr;
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            bottom: 5px;
+        }
+
+        &:hover {
+            color: darken($heading-clr, 10%);
+
+            &:after {
+                width: 50%;
+                background-color: darken($heading-clr, 10%);
+            }
+        }
+    }
+}
+
+// Form Components
+.form-control {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.6;
+    padding: 12px 24px;
+    border: 1px solid $text-clr;
+    border-radius: 30px;
+
+    &:active,
+    &:focus {
+        border-color: $primary-clr;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+// Checkbox
+.checkbox {
+    display: block;
+
+    label {
+        position: relative;
+        cursor: pointer;
+        color: $text-clr;
+        padding-left: 29px;
+
+        &:before {
+            content: "";
+            appearance: none;
+            background-color: transparent;
+            border: 1px solid rgba($black-clr, .3);
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 5px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+    }
+
+    input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+
+        &:checked {
+            + label {
+                &:before {
+                    border-color: $primary-clr;
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 6px;
+                    left: 4px;
+                    width: 10px;
+                    height: 10px;
+                    border: none;
+                    background: $primary-clr;
+                }
+            }
+        }
+    }
+
+    &.form-check {
+        padding-left: 0;
+    }
+}

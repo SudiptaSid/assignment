@@ -1,0 +1,33 @@
+/* Font */
+@import "https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&amp;family=Josefin+Sans:wght@200;300;400;500;600;700&amp;display=swap";
+
+/* Font Awesome */
+@import "../plugins/fontawesome/scss/fontawesome";
+@import "../plugins/fontawesome/scss/solid";
+@import "../plugins/fontawesome/scss/brands";
+@import "../plugins/fontawesome/scss/regular";
+
+/* Remix Icons */
+@import "../plugins/remix-icon/scss/remixicon";
+
+/* Bootstrap */
+@import "../plugins/bootstrap/scss/bootstrap";
+
+/* Owl Carousel */
+@import "../plugins/OwlCarousel-2/scss/owl.carousel";
+@import "../plugins/OwlCarousel-2/scss/owl.theme.default";
+
+/* Components */
+@import "components/variables";
+@import "components/keyframe";
+@import "components/reset";
+@import "components/plugin-edit";
+@import "components/forms";
+@import "components/heading";
+@import "components/header";
+@import "components/footer";
+@import "components/common";
+
+/* Pages */
+@import "pages/home";
+@import "pages/static";

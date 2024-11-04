@@ -1,0 +1,195 @@
+// Top Header
+.header-top {
+    background-color: $heading-clr;
+    padding: 10px 0px;
+    font-size: $fz-12;
+
+    .left-sec {
+        p {
+            color: $white-clr;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .right-sec {
+        display: flex;
+        justify-content: flex-end;
+        .social-profile {
+            gap: 1.5em;
+            li {
+                a {
+                    font-size: $fz-16;
+                }
+            }
+        }
+    }
+
+    // Max Width 767px
+    @media only screen and (max-width: $break-767) {
+        .left-sec {
+            @media only screen and (max-width: $break-767) {
+                display: none;
+            }
+        }
+    }
+}
+
+// Main Header
+.navbar-area {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 9;
+    background-color: $white-clr;
+    border-bottom: 1px solid rgba($black-clr, 0.15);
+
+    .navbar {
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+
+        .navbar-brand {
+            line-height: 1;
+            padding: 0;
+
+            img {
+                height: 40px;
+            }
+        }
+
+        .navbar-toggler {
+            box-shadow: unset;
+            border: none;
+            padding: 0;
+
+            .burger-menu {
+                cursor: pointer;
+
+                span {
+                    height: 3px;
+                    width: 30px;
+                    margin: 5px 0;
+                    display: block;
+                    background: $heading-clr;
+
+                    &.middle-bar {
+                        width: 24px;
+                    }
+                }
+            }
+        }
+
+        .navbar-nav {
+            gap: 50px;
+
+            .nav-item {
+                position: relative;
+
+                .nav-link {
+                    font-size: $fz-14;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    position: relative;
+                    color: $heading-clr;
+                    text-transform: capitalize;
+                    padding: 14px 0;
+
+                    &:hover,
+                    &.active {
+                        color: $primary-clr;
+                    }
+                }
+            }
+        }
+
+        .others-option {
+            position: relative;
+            .btn {
+                min-width: 120px;
+            }
+        }
+    }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0 10px 30px 0 rgba($black-clr, 0.09);
+    }
+}
+
+// Responsive Navbar
+.responsive-navbar {
+    .offcanvas-header {
+        padding: 15px;
+        border-bottom: 1px solid rgba($black-clr, 0.15);
+
+        .logo {
+            img {
+                height: 40px;
+            }
+        }
+
+        .close-btn {
+            background-color: transparent;
+            color: $heading-clr;
+            font-size: $fz-28;
+            cursor: pointer;
+            padding: 0;
+            border: 0;
+
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .offcanvas-body {
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            li {
+                a {
+                    font-weight: 600;
+                    color: $heading-clr;
+
+                    &:hover {
+                        color: $primary-clr;
+                    }
+                }
+            }
+        }
+
+        .social-profile {
+            li {
+                a {
+                    font-size: $fz-16;
+                    width: 40px;
+                    height: 40px;
+                    color: $primary-clr;
+                    background-color: rgba($primary-clr, 0.2);
+                    border-radius: 50%;
+                    &:hover {
+                        color: $white-clr;
+                        background-color: $primary-clr;
+                    }
+                }
+            }
+        }
+        .others-option {
+            padding-top: 30px;
+            border-top: 1px solid rgba($black-clr, 0.15);
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

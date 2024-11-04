@@ -1,0 +1,93 @@
+// Footer
+.footer-wrap {
+    background-color: $heading-clr;
+    font-size: $fz-14;
+    position: relative;
+    z-index: 1;
+
+    .footer-widget {
+        .title {
+            margin-bottom: 20px;
+            color: $white-clr;
+        }
+
+        .comp-desc {
+            margin-bottom: 20px;
+            color: darken($white-clr, 30%);
+        }
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            li {
+                a {
+                    color: darken($white-clr, 30%);
+
+                    &:hover {
+                        color: $primary-clr;
+                    }
+                }
+            }
+        }
+
+        .social-profile {
+            li {
+                a {
+                    font-size: $fz-16;
+                    width: 40px;
+                    height: 40px;
+                    color: $white-clr;
+                    background-color: rgba($white-clr, 0.05);
+                    border-radius: 50%;
+                    &:hover {
+                        color: $white-clr;
+                        background-color: $primary-clr;
+                    }
+                }
+            }
+        }
+
+        .best-books {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+                a {
+                    img {
+                        max-width: 70px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-top {
+        position: relative;
+        padding: 50px 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .copyright-text {
+        padding: 20px 0;
+        color: darken($white-clr, 30%);
+        border-top: 1px solid rgba($white-clr, 0.2);
+
+        p {
+            color: inherit;
+
+            a,
+            span {
+                color: $white-clr;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Max Width 767px
+    @media only screen and (max-width: $break-767) {
+    }
+}

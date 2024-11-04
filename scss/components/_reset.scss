@@ -1,0 +1,86 @@
+// Reset
+* {
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: darken($white-clr, 15%);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: darken($white-clr, 30%);
+        border-radius: 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $fz-16;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $text-clr;
+    background-color: $white-clr;
+    overflow-x: hidden;
+
+    // Max Width 767px
+    @media only screen and (max-width: $break-767) {
+        font-size: $fz-14;
+    }
+}
+
+a,
+button,
+input[type=submit] {
+    cursor: pointer;
+}
+
+a {
+    text-transform: inherit;
+    text-decoration: none;
+    color: darken($primary-clr, 5%);
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        box-shadow: none;
+        outline: 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $heading-clr;
+}
+
+p {
+    color: $text-clr;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}

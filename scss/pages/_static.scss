@@ -1,0 +1,101 @@
+// Contact Page One
+.contact-wrap-one {
+    padding: 60px 0;
+
+    .box-one {
+        max-width: 760px;
+        margin: auto;
+        padding: 4em;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .item-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .social-profile {
+        li {
+            a {
+                font-size: $fz-16;
+                width: 40px;
+                height: 40px;
+                color: $primary-clr;
+                background-color: rgba($primary-clr, 0.2);
+                border-radius: 50%;
+                &:hover {
+                    color: $white-clr;
+                    background-color: $primary-clr;
+                }
+            }
+        }
+    }
+}
+
+// About Wrap One
+.about-wrap-one {
+    padding: 60px 0;
+}
+
+// Product Wrap One
+.product-wrap-one {
+    padding: 60px 0;
+
+    .img-wrap {
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        padding-left: 50px;
+
+        .book-info {
+            .catagory {
+                font-size: $fz-14;
+                text-transform: capitalize;
+                color: $text-clr;
+            }
+            h4 {
+                margin: 5px 0;
+                font-weight: 600;
+            }
+            p {
+                margin-bottom: 8px;
+                span {
+                    color: $heading-clr;
+                }
+            }
+            .price {
+                font-size: $fz-20;
+                font-weight: 600;
+                color: $primary-clr;
+            }
+        }
+
+        .btn-sec {
+            display: flex;
+            gap: 10px;
+
+            .btn {
+                min-width: 120px;
+            }
+        }
+    }
+
+    // Max Width 767px
+    @media only screen and (max-width: $break-767) {
+        .content {
+            padding-left: 0;
+        }
+    }
+}

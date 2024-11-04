@@ -1,0 +1,45 @@
+// Heading
+.section-title-one,
+.content-title-one {
+    span {
+        margin: 0 0 5px;
+        position: relative;
+        display: inline-block;
+        padding-left: 50px;
+        font-size: $fz-14;
+        color: $primary-clr;
+        text-transform: capitalize;
+        &:before {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            content: "";
+            width: 38px;
+            height: 2px;
+            background-color: $primary-clr;
+
+        }
+    }
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+    }
+    p {
+        margin: 12px 0;
+        font-size: $fz-18;
+    }
+    ul {
+        margin-top: 30px;
+    }
+
+    @media only screen and (max-width: $break-767) {
+        span {
+            font-size: 1em;
+            padding-left: 50px;
+        }
+        p {
+            font-size: $fz-16;
+        }
+    }
+}
